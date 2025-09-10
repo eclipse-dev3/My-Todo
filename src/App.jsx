@@ -3,6 +3,7 @@ import './App.css'
 import { TodoContext } from './Context/TodoContext'
 import Form from './Components/Form'
 import TodoItem from './Components/TodoItem'
+import Profile from './Context/TodoContext'
 
 function App() {
 
@@ -35,7 +36,16 @@ function App() {
 
     return (
         <TodoContext.Provider value={{ todos, addTodo, deleteTodo, updateTodo, toggleCompleted }}>
-            <div className="bg-[#008275] min-h-screen py-8">
+            <div className="bg-[#008275] min-h-screen py-8 relative">
+                <div className="flex justify-center items-center flex-col absolute top-3 right-3">
+                    <a href="https://gaurav-kumar-03.vercel.app"
+                        target='_blank'
+                    >
+                        <img className='cursor-pointer '
+                            src={Profile} alt="" width={`60px`} />
+                    </a>
+                    <p>Portfolio</p>
+                </div>
                 <div className="w-full max-w-3xl mx-auto shadow-lg rounded-lg px-4 py-3 text-white">
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">

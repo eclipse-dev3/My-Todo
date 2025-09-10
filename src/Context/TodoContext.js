@@ -1,5 +1,9 @@
 import { useContext, createContext } from "react";
 
+import Profile from '../assets/Profile.png'
+
+export default Profile;
+
 export const TodoContext = createContext({
     todos: [
         {
